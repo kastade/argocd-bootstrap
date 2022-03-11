@@ -8,8 +8,10 @@ spec:
   destinations:
   - namespace: lalaland
     server: https://kubernetes.default.svc
+  # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
+  roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
     description: Read-only privileges to my-project
