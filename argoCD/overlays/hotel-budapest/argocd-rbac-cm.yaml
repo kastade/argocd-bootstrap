@@ -17,4 +17,5 @@ data:
     p, role:org-admin, repositories, delete, *, allow
 
     g, your-github-org:your-team, role:org-admin
+    g, lala:team2, role:org-admin
     g, catenax-ng:ArgoCDAdmins, role:admin
