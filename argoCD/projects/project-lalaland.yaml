@@ -6,7 +6,7 @@ metadata:
 spec:
   description: This is LalaLand
   destinations:
-  - namespace: lalaland
+  - namespace: default
     server: https://kubernetes.default.svc
   # Allow manifests to deploy from any Git repos
   sourceRepos:
