@@ -6,6 +6,7 @@ namespace: argocd
 resources:
   - namespace.yaml
   - github.com/argoproj/argo-cd//manifests/ha/cluster-install?ref=v2.3.1
+  - projects/project-lalaland.yaml
 
 patchesStrategicMerge:
   - overlays/hotel-budapest/argocd-rbac-cm.yaml

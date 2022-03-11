@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: lalaland
+
+spec:
+  description: This is LalaLand
+  destinations:
+  - namespace: lalaland
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - '*'
+  # A role which provides read-only access to all applications in the project
+  - name: read-only
+    description: Read-only privileges to my-project
+    policies:
+    - p, proj:lalaland:read-only, applications, get, lalaland/*, allow
+    groups:
+    - catenax-ng:ArgoCDAdmins
