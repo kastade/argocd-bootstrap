@@ -11,11 +11,3 @@ spec:
   # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
-  roles:
-  # A role which provides read-only access to all applications in the project
-  - name: read-only
-    description: Read-only privileges to my-project
-    policies:
-    - p, proj:lalaland:read-only, applications, get, lalaland/*, allow
-    groups:
-    - catenax-ng:ArgoCDAdmins
