@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-edc
+
+spec:
+  description: Project EDC
+  destinations:
+  - namespace: default
+    server: https://kubernetes.default.svc
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+
+  roles:
+  # A role which provides access to all applications in the project
+  - name: team-edc
+    description: Read-only privileges to my-project
+    policies:
+    - p, proj:project-edc:team-edc, applications, *, project-edc/*, allow
+    - p, proj:project-edc:team-edc, projects, get, project-edc, allow
+
+    groups:
+    - catenax-ng:product-edc, role:team-edc
