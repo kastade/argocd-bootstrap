@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  - '*'
+  - 'https://github.com/catenax-ng/*'
 
   roles:
   # A role which provides access to all applications in the project
